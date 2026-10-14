@@ -8,9 +8,11 @@ using namespace std;
 
 class HttpInspector {
 public:
-    // Simple blocklist for malicious signatures (e.g., SQLi patterns or bad User-Agents)
-    static constexpr array<string_view, 3> maliciousPatterns = {
+    // Blocklist covering standard and URL-encoded SQLi patterns & bad bots
+    static constexpr array<string_view, 5> maliciousPatterns = {
         "UNION SELECT",
+        "UNION%20SELECT",
+        "UNION+SELECT",
         "1=1",
         "BadBot/1.0"
     };
