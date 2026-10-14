@@ -1,0 +1,9 @@
+# Compiled binaries
+reverse_proxy
+*.o
+*.out
+
+# IDE specific files
+.vscode/
+.idea/
+.DS_Store
